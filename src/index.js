@@ -27,6 +27,7 @@ app.listen(PORT, () => console.log(`Escuchando servidor en puerto ${PORT}`))
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
+
 //Estructura handlebars
 app.engine("handlebars", engine())
 app.set("view engine", "handlebars")
@@ -66,6 +67,7 @@ app.get("/chat", (req, res)=> {
         title: "Chat con Mogoose"
     })
 })
+
 
 
 

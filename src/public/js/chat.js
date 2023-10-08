@@ -9,20 +9,19 @@ document.getElementById("userForm").addEventListener("submit", async (e) => {
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(user, message)
+            body: JSON.stringify({user, message})
         })
-        if (response.ok){
-            const responseData = await response.json()
-            const succesMessage = responseData.message
-
-            console.log(succesMessage)
-            userInputElement.value = ``;
-            messageInputElement.value = ``;
+        if (response.ok) {
+            const responseData = await response.json();
+            const successMessage = responseData.message;
+        
+            console.log(successMessage);
+            document.getElementById("user").value = ""; 
+            document.getElementById("textMessage").value = ""; 
         } else {
-            console.error(`error al enviar el mensaje 1`)
+            console.error("Error al enviar el mensaje");
         }
     } catch (error) {
-            console.error(`error al enviar el mensaje 2`)
-    }
+        console.error("Error al enviar el mensaje: " + error.message);    }
 })
 
