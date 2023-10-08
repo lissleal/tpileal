@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+</head>
+<body>
+    <div class="form">
+        <h2>Chat con handlebars</h2>
+    <form id="userForm" action="/api/messages" method="POST">
+        <div class="inputs">
+        <label for="user">Nombre</label>
+        <input type="text" placeholder="nombre" id="user" name="user" required>
+
+        <label for="textMessage">Mensaje</label>
+        <input type="text" placeholder="mensaje" id="textMessage" name="textMessage" required>
+        </div>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+</div>
+</body>
+</html>
+
+<script src="js/chat.js"></script>
